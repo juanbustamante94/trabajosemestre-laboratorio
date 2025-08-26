@@ -1,37 +1,35 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./sketch.js" type="module"></script>
+    <style>
+        body{
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 13px;
+        }
 
-const cities = [
-    {name:"Amieirinha",population:4812946},
-    {name:"Kinshasa",population:1027499},
-    {name:"Blantyre",population:1992831},
-    {name:"Pueblo Nuevo Viñas",population:6106658},
-    {name:"Ko Si Chang",population:1258350},
-    {name:"Rabak",population:5611054},
-    {name:"Port-Cartier",population:2014142},
-    {name:"Detroit",population:8927289},
-    {name:"Medeiros Neto",population:6847563},
-    {name:"Kushchëvskaya",population:4160962}
-]
+        .bars rect{
+            fill: #eb9e98;
+        }
 
-d3.select('.bars')
-    .selectAll('rect')
-    .data(cities)
-    .join('rect')
-    .attr('height', 19)
-    .attr('width', function(d){
-        return d.population * 40e-6
-    })
-    .attr('y', function(d, i){
-        return i * 20
-    })
-
-d3.select('.labels')
-    .selectAll('text')
-    .data(cities)
-    .join('text')
-    .attr('y', function(d, i){
-        return i * 20 + 13
-    })
-    .text(function(d){
-        return d.name
-    })
+        .bars rect:hover{
+            fill: #de6c64;
+        }
+    </style>
+</head>
+<body>
+    <svg width="200" height="600">
+<g transform="rotate(90, 100, 100)">
+<g class="bars" transform="translate(140,0)">
+ <rect x="0" y="0" width="30" height="100"></rect>
+ <rect x="0" y="0" width="30" height="150"></rect>
+ <rect x="0" y="0" width="30" height="80"></rect>
+ </g>
+ <g class="labels"></g>
+       
+    </svg>
+</body>
+</html>
