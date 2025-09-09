@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./sketch.js" type="module"></script>
+    <title>Clase 4 – Parte 2</title>
     <style>
-        body{
-            font-family: "Helvetica Neue", Helvetica, sans-serif;
-            font-size: 13px;
+        .mapa path:hover{
+            fill: #000746;
         }
 
-        .bars rect{
-            fill: #eb9e98;
+        .etiqueta{
+            border: 1px solid #101010;
+            width: 150px;
+            height: 50px;
+            background-color: white;
+            display: flex;
+            position: absolute;
+            pointer-events: none;
+            font-family: 'Helvetica', sans-serif;
         }
-
-        .bars rect:hover{
-            fill: #de6c64;
+        .etiqueta p{
+            margin: auto;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <svg width="200" height="600">
-<g transform="rotate(90, 100, 100)">
-<g class="bars" transform="translate(130,0)
- <rect x="0" y="0" width="30" height="100"></rect>
- <rect x="50" y="0" width="30" height="150"></rect>
- <rect x="100" y="0" width="30" height="80"></rect>
- </g>
- <g class="labels"></g>
-       
+    <svg width="500" height="500">
+        <g class="mapa"></g>
     </svg>
+    <script src="./script.js" type="module"></script>
 </body>
 </html>
